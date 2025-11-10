@@ -36,5 +36,29 @@ def convert2(num, sys):
         num //= sys
     return res[::-1]
 
+# Срезы
+test = 'Hello world!'
+# Извлечение первых двух символов
+print(test[:2])
+# Строка без первых двух символов
+print(test[2:])
+# Извлечение последних двух символов
+print(test[-2:])
+# Строка без последних двух символов
+print(test[:-2])
+
+# Сумма цифр числа
+# Двоично число
+num_1 = '1010'
+print(num_1.count('1'))
+
+# Системы до 10 включительно
+num_2 = '929'
+print(sum(map(int, num_2)))
+
+# Системы до 36 включительно
+num_3 = 'AF5'
+print(sum(map(lambda x: int(x,36), num_3)))
+print(*map(lambda x: int(x,36), num_3))
 
 
