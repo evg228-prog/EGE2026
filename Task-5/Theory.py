@@ -61,4 +61,8 @@ num_3 = 'AF5'
 print(sum(map(lambda x: int(x,36), num_3)))
 print(*map(lambda x: int(x,36), num_3))
 
+# Модуль числа
+
+abs()
+
 
