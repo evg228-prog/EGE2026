@@ -70,7 +70,7 @@ def fact_3(num):
         num //= 2
 
     i = 3
-    while i < int(num ** .5) + 1:
+    while i * i < num + 1:
         while num % i == 0:
             d += [i]
             num //= i
