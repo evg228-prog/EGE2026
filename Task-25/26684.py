@@ -16,8 +16,14 @@ def fact(num):
 cnt = 0
 for N in range(5_000_001, 10**11):
     dels = fact(N)
-    if N % 100 == 12 and sum(str(dels).count('x') == 5 for x in dels) >= 1:
-        print(N, min(dels))
+    if N % 100 == 12 and sum(dels.count(x) == 5 for x in dels) >= 1:
+        print(N, min(x for x in dels if dels.count(x) == 5))
         cnt += 1
         if cnt == 5:
             break
+
+# 5001312 2
+# 5001912 3
+# 5002912 2
+# 5004512 2
+# 5006112 2
