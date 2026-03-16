@@ -1,12 +1,3 @@
-from string import *
-
-def convert(num, sys):
-    res = ''
-    while num:
-        res += printable[num % sys]
-        num //= sys
-    return res[::-1]
-
 for p in range(25, 37):
     num1 = int('bo', p)
     num2 = int('om', p)
