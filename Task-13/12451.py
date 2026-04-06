@@ -12,3 +12,5 @@ for A in range(256):
     if ip_host in net.hosts() and all(f(host) for host in net.hosts()):
         cnt += 1
 print(cnt)
+
+# 120
