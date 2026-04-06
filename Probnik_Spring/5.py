@@ -14,11 +14,11 @@ for N in range(1, 100_000):
     if N % 4 == 0:
         R = R + R[:2]
     else:
-        R = convert(N % 4 * 4, 4)
+        R = R + convert(N % 4 * 4, 4)
     R = int(R, 4)
     if R > 291:
         ans.append(R)
 print(min(ans))
 
-# 325
+# 296
 

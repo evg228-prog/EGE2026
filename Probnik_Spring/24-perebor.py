@@ -12,7 +12,7 @@ for i in range(len(data)):
         if cnt_Z == 271:
             break
         cnt += 1
-    ans = max(ans, cnt)
+    ans = min(ans, cnt)
 print(ans)
 
-# 1697
+# 1058
