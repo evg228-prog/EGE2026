@@ -8,6 +8,5 @@ pattern = r'((AB)*(AC)*(AB)*)+'
 matches = [match.group() for match in finditer(pattern, data)]
 
 print(len(max(matches, key=len)) // 2)
-print(len(max(matches, key=len)))
 
 # 2397
