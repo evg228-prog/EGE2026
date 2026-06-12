@@ -18,4 +18,14 @@ for art, price, stat in data:
 
 leader = None
 for art in exp:
-    if
+    if leader is None:
+        leader = art
+    if exp[art][1] > exp[leader][1]:
+        leader = art
+    if exp[art][1] == exp[leader][1] and exp[art][0] > exp[leader][0]:
+        leader = art
+    if exp[art][1] == exp[leader][1] and exp[art][0] == exp[leader][0] and exp[art][2] < exp[leader][2]:
+        leader = art
+print(exp[leader][0] * exp[leader][1], exp[leader][2])
+
+# 43656 36
