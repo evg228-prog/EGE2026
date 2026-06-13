@@ -1,35 +1,54 @@
 with open(r'.\files\26_23383 (1).txt') as file:
     N = int(file.readline())
-    runners = [list(map(int, i.split())) for i in file]
+    data = [tuple(map(int, i.split())) for i in file]
 
-runners = sorted(set(tuple(i) for i in runners))
 
-best_id = 0
-best_race = 0
-cnt_sportsman = 0
+data = sorted(set(data), key=lambda x: (x[1], x[0]))
 
 cnt = 1
-for i in range(len(runners) - 1):
-    if runners[i][0] == runners[i + 1][0] and runners[i + 1][1] - runners[i][1] == 2:
+ans = []
+for men_1, men_2 in zip(data, data[1:]):
+    if men_1[1] == men_2[1] and men_2[0] - men_1[0] == 1:
         cnt += 1
     else:
-        if cnt > best_race:
-            best_race = cnt
-            best_id = runners[i][0]
-            cnt_sportsman = 1
-        elif cnt == best_race:
-            cnt_sportsman += 1
-            if runners[i][0] < best_id:
-                best_id = runners[i][0]
         cnt = 1
+    ans.append([cnt, men_1[1]])
+print(*max(ans, key=lambda x: (x[0], -x[1])))
 
-if cnt > best_race:
-    best_race = cnt
-    best_id = runners[-1][0]
-    cnt_sportsman = 1
-elif cnt == best_race:
-    cnt_sportsman += 1
-    if runners[-1][0] < best_id:
-        best_id = runners[i][0]
+# 56 30113
 
-print(cnt_sportsman, best_id)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################
+
+# runners = {}
+# for num, checkpoint in times:
+#     if checkpoint not in runners:
+#         runners[checkpoint] = {num}
+#     else:
+#         runners[checkpoint] |= {num}
+#
+# cnt = 1
+# ans = 0
+# best_checkpoint = []
+#
+# for checkpoint in runners:
+#
+#
+# print(ans)
+
