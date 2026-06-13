@@ -16,9 +16,9 @@ for art, price, stat in data:
         else:
             exp[art][2] += 1
 
-leader = None
+leader = 0
 for art in exp:
-    if leader is None:
+    if leader == 0:
         leader = art
     if exp[art][1] > exp[leader][1]:
         leader = art

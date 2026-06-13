@@ -9,3 +9,5 @@ for pos, line in enumerate(data, start=1):
         if sum(rep) // len(rep) < max(non_rep):
             print(pos, line)
             break
+
+# 17
