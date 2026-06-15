@@ -3,7 +3,6 @@ with open(r'.\files\26_9756.txt') as file:
     times = [list(map(int, i.split())) for i in file]
 
 times = sorted(times, key=lambda x: (x[1], x[0]))
-
 events = [times[0]]
 
 for time in times:
